@@ -44,10 +44,9 @@ export class HomePage extends React.PureComponent {
       this.props.onSubmitForm();
     }
 
-    request('http://localhost:5000/')
-      .then((res) => {
-        console.log(res);
-      });
+    request('http://localhost:5000/').then(res => {
+      console.log(res);
+    });
   }
 
   render() {
@@ -67,9 +66,7 @@ export class HomePage extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <div>
-          Here are some words
-        </div>
+        <div>Here are some words</div>
       </article>
     );
   }

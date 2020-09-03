@@ -20,8 +20,10 @@ class Header extends React.Component {
       <div>
         <NavBar>
           <KolorTitleHeader>
-            <div style={styles.kolorLogo}>          
-            <A href="/"><Img src={KolorLogo} style={styles.kolorLogo} /></A>
+            <div style={styles.kolorLogo}>
+              <A href="/">
+                <Img src={KolorLogo} style={styles.kolorLogo} />
+              </A>
             </div>
             <KolorTitle>Kolor</KolorTitle>
           </KolorTitleHeader>
