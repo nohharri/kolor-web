@@ -5,23 +5,31 @@ import A from './A';
 import Img from './Img';
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
 import messages from './messages';
+import KolorLogo from '../../images/kolorLogo.png';
+import styles from './styles';
+import KolorTitleHeader from './KolorTitleHeader';
+import KolorTitle from './KolorTitle';
 
-/* eslint-disable react/prefer-stateless-function */
+/**
+ * Main header of the app. Contains the logo and navigation.
+ */
 class Header extends React.Component {
   render() {
     return (
       <div>
-        <A href="https://twitter.com/mxstbr">
-          <Img src={Banner} alt="react-boilerplate - Logo" />
-        </A>
         <NavBar>
-          <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
-          </HeaderLink>
-          <HeaderLink to="/features">
+          <KolorTitleHeader>
+            <div style={styles.kolorLogo}>          
+            <A href="/"><Img src={KolorLogo} style={styles.kolorLogo} /></A>
+            </div>
+            <KolorTitle>Kolor</KolorTitle>
+          </KolorTitleHeader>
+          <HeaderLink to="/features" activeStyle={styles.navbarActive}>
             <FormattedMessage {...messages.features} />
+          </HeaderLink>
+          <HeaderLink to="/about" activeStyle={styles.navbarActive}>
+            <FormattedMessage {...messages.about} />
           </HeaderLink>
         </NavBar>
       </div>
